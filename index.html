@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>오크 클래식 아이템 사전</title>
-<!-- updated: item cleanup + click search + static background -->
+<!-- updated: item cleanup + click search + static background + home button -->
 <style>
   :root { --bg:#0b0806; --panel:#14110e; --line:#4a311c; --gold2:#b88b50; --text:#e8e0d3; --muted:#a99b88; }
   * { box-sizing:border-box; }
@@ -12,6 +12,11 @@
   body { margin:0; background:#0b0806; color:var(--text); font-family:"Noto Sans KR","Malgun Gothic",Arial,sans-serif; letter-spacing:-.2px; min-height:100vh; }
   body:before { content:""; position:fixed; inset:0; z-index:-1; pointer-events:none; background:radial-gradient(circle at 50% 0%, #1b1611 0, #0b0806 45%, #050403 100%); }
   .orc-dic { max-width:1180px; margin:0 auto; padding:42px 24px 70px; }
+
+  .back-home { display:inline-flex; align-items:center; gap:7px; margin:0 0 14px; color:#c9b38f; font-size:13px; font-weight:700; line-height:1; text-decoration:none; border:1px solid rgba(184,139,80,.28); background:rgba(20,17,14,.68); padding:10px 13px; transition:background .16s ease,border-color .16s ease,color .16s ease,transform .16s ease; }
+  .back-home:before { content:"←"; color:#b88b50; font-size:14px; }
+  .back-home:hover { color:#fff0d0; border-color:rgba(184,139,80,.52); background:rgba(31,23,16,.82); transform:translateX(-1px); }
+  .back-home:active { transform:translateX(-1px) translateY(1px); }
   .top { border:1px solid var(--line); background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(0,0,0,.08)), radial-gradient(circle at 70% 0%,rgba(151,104,54,.12),transparent 34%), rgba(13,9,7,.82); padding:34px 36px 28px; margin-bottom:22px; }
   .title { display:flex; align-items:flex-end; justify-content:space-between; gap:16px; border-bottom:1px solid var(--line); padding-bottom:18px; margin-bottom:16px; }
   h1 { margin:0; color:#fff; font-size:32px; line-height:1.1; font-weight:800; text-shadow:0 0 12px rgba(217,180,122,.18); }
@@ -67,6 +72,7 @@
 </head>
 <body>
 <div class="orc-dic">
+  <a class="back-home" href="https://orcclassic.blogspot.com/" aria-label="홈페이지로 돌아가기">홈페이지로 돌아가기</a>
   <div class="top">
     <div class="title"><h1>아이템 사전</h1><div class="date">오크 클래식</div></div>
     <div class="desc">무기, 방어구, 악세서리, 마법인형 정보를 확인할 수 있습니다.<br>소모품, 재료 아이템과 서버 특화 아이템은 제외되어 있습니다.</div>
